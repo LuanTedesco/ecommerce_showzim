@@ -84,3 +84,36 @@ production:
   database: ecommerce_showzim_production
   username: ecommerce_showzim
   password: <%= ENV["ECOMMERCE_SHOWZIM_DATABASE_PASSWORD"] %>
+
+
+# Database Diagram
+
+#Table products {
+#  id bigint [pk ,increment]
+#  name varchar [not null]
+#  description text [not null]
+#  price decimal [not null]
+#  category_id bigint [not null]
+#  publish boolean [not null]
+#  criated_at timestamp [not null]
+#  updated_at timestamp [not null]
+#}
+
+#Ref: products.category_id > categonies.id
+
+#Table addresses {
+#  id bigint [pk, increment]
+#  name varchar [not null]
+#  street varchar [not null]
+#  neightborhood varchar [not null]
+#  number varchar [not null]
+#  zipcode varchar [not null]
+#  state varchar [not null]
+#  complement varchar [not null]
+#  main boolean [not null]
+#  user_id bigint [not null]
+#  criated_at timestamp [not null]
+#  updated_at timestamp [not null]
+#}
+
+#Ref: addresses.user_id > users.id
