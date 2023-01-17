@@ -1,6 +1,6 @@
 <%= simple_form_for(resource, html: { class: 'login-form' }, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <div class="text-center">
-  <%= f.error_notification %>
+    <%= f.error_notification %>
   </div>
 
   <div class="form-inputs">
@@ -12,7 +12,7 @@
                 input_html: { autocomplete: "email" } %>
   </div>
 
-    <%= render 'devise/shared/button_submit', f: f, text: 'Recuperar Senha' %>
+  <%= render 'devise/shared/button_submit', f: f, text: 'Recuperar Senha' %>
 <% end %>
 
 <div class="form-group d-md-flex">

@@ -1,4 +1,4 @@
-web: unset PORT && bin/rails server
+web: bin/rails server -p 3000
 js: yarn build --watch
 css: yarn build:css --watch
-devise: yarn build:css:devise --watch/progshowzim/ecommerce_showzim
+devise: yarn build:css:devise --watch
