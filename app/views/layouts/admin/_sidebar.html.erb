@@ -7,19 +7,28 @@
   </a>
   <hr class="sidebar-divider my-0">
   <li class="nav-item active">
-    <a class="nav-link" href=" <%= admin_root_path %> ">
+    <a class="nav-link collapsed" href=" <%= admin_root_path %> ">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Dashboard</span></a>
   </li>
   <hr class="sidebar-divider">
   <li class="nav-item">
-    <a class="nav-link" href="<%= admin_categories_path %>" >
+    <a class="nav-link collapsed" href="<%= admin_categories_path %>" >
       <i class="fas fa-fw fa-bookmark"></i>
       <span>Categorias</span>
     </a>
   </li>
   <li class="nav-item">
-    <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "nav-link" %>
+    <a class="nav-link collapsed" href="<%= admin_products_path %>" >
+      <i class="fas fa-fw fa-puzzle-piece"></i>
+      <span>Produtos</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link collapsed" data-method="delete" href="<%= destroy_user_session_path %>" >
+      <i class="fas fa-fw fa-right-from-bracket"></i>
+      <span>Sair</span>
+    </a>
   </li>
   <hr class="sidebar-divider d-none d-md-block">
   <div class="text-center d-none d-md-inline">
