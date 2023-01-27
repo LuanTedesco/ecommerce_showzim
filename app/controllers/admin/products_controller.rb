@@ -29,10 +29,9 @@ module Admin
     end
 
     def update
-      @product = Product.new(product_params)
       respond_to do |format|
-        if @product.update
-          format.html { redirect_to admin_products_path(@product), notice: 'Produto cadastrado com sucesso' }
+        if @product.update(product_params)
+          format.html { redirect_to admin_products_path(@product), notice: 'Produto atualizado com sucesso!' }
         else
           format.html { render :edit, status: :unprocessable_entity }
         end
@@ -49,7 +48,7 @@ module Admin
     private
 
     def product_params
-      params.require(:product).permit(:name, :description, :price, :publish, :category_id)
+      params.require(:product).permit(:name, :description, :price, :publish, :image, :category_id)
     end
 
     def set_product
