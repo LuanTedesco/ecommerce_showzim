@@ -7,7 +7,7 @@
     <%= f.input :name,
                 label: false,
                 placeholder: 'Nome'%>
-    <%= f.input :phone,
+    <%= f.input :phone, input_html:{ class: "mask-phone" },
                 label: false,
                 placeholder: 'Telefone'%>
     <%= f.input :email,
