@@ -19,23 +19,19 @@ module Admin
 
     def create
       @product = Product.new(product_params)
-      respond_to do |format|
         if @product.save
-          format.html { redirect_to admin_products_path(@product), notice: 'Produto cadastrado com sucesso' }
+          redirect_to admin_products_path(@product), notice: 'Produto cadastrado com sucesso'
         else
-          format.html { render :new, status: :unprocessable_entity }
+          render :new, status: :unprocessable_entity
         end
-      end
     end
 
     def update
-      respond_to do |format|
         if @product.update(product_params)
-          format.html { redirect_to admin_products_path(@product), notice: 'Produto atualizado com sucesso!' }
+          redirect_to admin_products_path(@product), notice: 'Produto atualizado com sucesso!'
         else
-          format.html { render :edit, status: :unprocessable_entity }
+          render :edit, status: :unprocessable_entity
         end
-      end
     end
 
     def destroy
